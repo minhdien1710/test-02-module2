@@ -18,7 +18,7 @@ public class StudentController {
         @Autowired
         LopHocService lopHocService;
 
-        @ModelAttribute("classes")
+        @ModelAttribute("lopHocs")
         public Iterable<LopHoc> classes() {
             return lopHocService.findAll();
         }
@@ -39,12 +39,11 @@ public class StudentController {
         }
 
         @PostMapping("/create-student")
-        public ModelAndView saveCustomer(@ModelAttribute("student") Student student) {
+        public ModelAndView saveStudent(@ModelAttribute("student") Student student) {
             studentService.save(student);
 
             ModelAndView modelAndView = new ModelAndView("/student/create");
             modelAndView.addObject("student", new Student());
-            modelAndView.addObject("message", "New student created successfully");
             return modelAndView;
         }
 
@@ -71,12 +70,11 @@ public class StudentController {
 
         }
 
-        @PostMapping("/edit-customer")
+        @PostMapping("/edit-student")
         public ModelAndView updateStudent(@ModelAttribute("student") Student student) {
             studentService.save(student);
             ModelAndView modelAndView = new ModelAndView("/student/update");
             modelAndView.addObject("student", student);
-            modelAndView.addObject("message", "student updated successfully");
             return modelAndView;
         }
     }
