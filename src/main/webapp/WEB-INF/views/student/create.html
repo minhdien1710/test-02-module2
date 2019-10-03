@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create student</title>
+</head>
+<body>
+<h1>Create student</h1>
+<p>
+    <a href="/students">student list</a>
+</p>
+
+<form th:action="@{/students}" th:object="${student}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td><input type="date" th:field="*{birthday}"/></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" th:field="*{address}"/></td>
+        </tr>
+        <tr>
+            <td>Avatar:</td>
+            <td><input type="image" th:field="*{image}"/></td>
+        </tr>
+        <tr>
+            <td>Class:</td>
+            <td>
+                <select th:field="*{lopHoc}">
+                    <option th:each="p : ${lopHocs}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create customer"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
