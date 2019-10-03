@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Optional;
+
 @Controller
 public class StudentController {
         @Autowired
@@ -24,8 +26,13 @@ public class StudentController {
         }
 
         @GetMapping("/students")
-        public ModelAndView students(@RequestParam Pageable pageable) {
-            Page<Student> students = studentService.findAll(pageable);
+        public ModelAndView students(@ModelAttribute("s") Optional<LopHoc> s, Pageable pageable){
+            Page<Student> students;
+            if(s.isPresent()){
+                students = studentService.findAllByLopHoc(s.get(),pageable);
+            }else {
+                students = studentService.findAll(pageable);
+            }
             ModelAndView modelAndView = new ModelAndView("/student/list");
             modelAndView.addObject("students", students);
             return modelAndView;

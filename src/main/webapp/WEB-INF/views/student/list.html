@@ -6,6 +6,13 @@
 </head>
 <body>
 <a href="/create-student">Create new student</a>
+    <a>Search by class:</a>
+    <th:block>
+        <select th:field="*{lopHocs}">
+            <option th:each="p : ${lopHocs}" th:value="${p.id}" th:text="${p.name}"></option>
+        </select>
+    </th:block>
+
 <table border="1">
     <tr>
         <th>name</th>

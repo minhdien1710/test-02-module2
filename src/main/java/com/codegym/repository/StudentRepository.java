@@ -7,5 +7,5 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface StudentRepository extends PagingAndSortingRepository<Student,Long> {
-    Iterable<Student> findAllByLopHoc(LopHoc lopHoc);
+    Page<Student> findAllByLopHoc(LopHoc lopHoc,Pageable pageable);
 }

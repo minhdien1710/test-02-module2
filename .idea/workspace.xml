@@ -10,9 +10,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/LopHocController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/LopHocController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/StudentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/test-02-modelu-02-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/test-02-modelu-02-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/LopHocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/LopHocController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570086184871</updated>
-      <workItem from="1570086196321" duration="10600000" />
+      <workItem from="1570086196321" duration="11543000" />
     </task>
     <servers />
   </component>

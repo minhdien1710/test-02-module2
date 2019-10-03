@@ -32,7 +32,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Iterable<Student> findAllByLopHoc(LopHoc lopHoc) {
-        return studentRepository.findAllByLopHoc(lopHoc);
+    public Page<Student> findAllByLopHoc(LopHoc lopHoc,Pageable pageable) {
+        return studentRepository.findAllByLopHoc(lopHoc,pageable);
     }
 }

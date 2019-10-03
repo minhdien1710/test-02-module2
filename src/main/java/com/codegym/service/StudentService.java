@@ -10,5 +10,5 @@ public interface StudentService {
     Student findById(Long id);
     void save(Student student);
     void remove(Long id);
-    Iterable<Student> findAllByLopHoc(LopHoc lopHoc);
+    Page<Student> findAllByLopHoc(LopHoc lopHoc,Pageable pageable);
 }

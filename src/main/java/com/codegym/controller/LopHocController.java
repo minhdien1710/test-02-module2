@@ -22,13 +22,13 @@ public class LopHocController {
     @Autowired
     private StudentService studentService;
     @GetMapping("/view-lopHoc/{id}")
-    public ModelAndView viewLopHoc(@PathVariable("id") Long id){
+    public ModelAndView viewLopHoc(@PathVariable("id") Long id,Pageable pageable){
         LopHoc lopHoc = lopHocService.findById(id);
         if(lopHoc == null){
             return new ModelAndView("/error");
         }
 
-        Iterable<Student> students = studentService.findAllByLopHoc(lopHoc);
+        Iterable<Student> students = studentService.findAllByLopHoc(lopHoc,pageable);
 
         ModelAndView modelAndView = new ModelAndView("/class/view");
         modelAndView.addObject("lopHoc", lopHoc);
