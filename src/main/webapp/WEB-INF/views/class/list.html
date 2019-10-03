@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Provinces</title>
 </head>
 <body>
-
+<a href="/create-lopHoc">Create new LopHoc</a>
+<h1>Provinces</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="lopHoc : ${lopHocs}">
+        <tr>
+            <td><a th:href="@{/view-lopHoc/__${lopHoc.id}__}" th:text="${lopHoc.name}"></a></td>
+            <td><a th:href="@{/edit-lopHoc/__${lopHoc.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-lopHoc/__${lopHoc.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
 </body>
 </html>

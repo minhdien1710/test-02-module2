@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>View class</title>
 </head>
 <body>
-
+<h1>View class: <span th:text="${lopHoc.name}"></span></h1>
+<a href="/lopHocs">class list</a>
+<table border="1">
+    <tr>
+        <th>name</th>
+    </tr>
+    <th:block th:each="student : ${students}">
+        <tr>
+            <td th:text="${student.name}"></td>
+        </tr>
+    </th:block>
+</table>
 </body>
 </html>

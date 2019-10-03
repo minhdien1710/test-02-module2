@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit class</title>
 </head>
 <body>
-
+<p>
+    <a href="/lopHocs">class list</a>
+</p>
+<form th:action="@{/edit-lopHoc}" th:object="${lopHoc}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update class"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

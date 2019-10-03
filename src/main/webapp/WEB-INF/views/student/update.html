@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit student</title>
 </head>
 <body>
-
+<p>
+    <a href="/students">Student list</a>
+</p>
+<form th:action="@{/edit-student}" th:object="${student}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>birthday:</td>
+            <td><input type="text" th:field="*{birthDate}"/></td>
+        </tr><tr>
+        <td>Address:</td>
+        <td><input type="text" th:field="*{address}"/></td>
+    </tr>
+        <tr>
+            <td>Avatar:</td>
+            <td><input type="text" th:field="*{image}"/></td>
+        </tr>
+        <tr>
+            <td>class:</td>
+            <td>
+                <select name="lopHoc">
+                    <option th:each="p : ${lopHocs}"
+                            th:value="${p.id}"
+                            th:text="${p.name}"
+                            th:selected="(${p.id} == *{lopHoc.id})"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update customer"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

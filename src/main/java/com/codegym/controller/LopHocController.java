@@ -44,7 +44,7 @@ public class LopHocController {
         return modelAndView;
     }
 
-    @GetMapping("/create-LopHoc")
+    @GetMapping("/create-lopHoc")
     public ModelAndView showCreateForm(){
         ModelAndView modelAndView = new ModelAndView("/class/create");
         modelAndView.addObject("lopHoc", new LopHoc());
@@ -52,7 +52,7 @@ public class LopHocController {
     }
 
     @PostMapping("/create-lopHoc")
-    public ModelAndView saveProvince(@ModelAttribute("lopHoc") LopHoc lopHoc){
+    public ModelAndView saveLopHoc(@ModelAttribute("lopHoc") LopHoc lopHoc){
         lopHocService.save(lopHoc);
 
         ModelAndView modelAndView = new ModelAndView("/class/create");

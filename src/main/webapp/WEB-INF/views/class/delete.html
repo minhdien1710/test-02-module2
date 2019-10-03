@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Delete class</title>
 </head>
 <body>
-
+<h2>Are you sure?</h2>
+<p>
+    <a href="/lopHocs">Class list</a>
+</p>
+<form th:action="@{/delete-lopHoc}" th:object="${lopHoc}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td th:text="${lopHoc.name}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete class"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

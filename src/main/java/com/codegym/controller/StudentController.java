@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class StudentController {
-    public class CustomerController {
         @Autowired
         StudentService studentService;
         @Autowired
@@ -81,4 +80,3 @@ public class StudentController {
             return modelAndView;
         }
     }
-}
